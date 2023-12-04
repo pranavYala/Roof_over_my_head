@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Roof Over My Head</title>
         <link rel="stylesheet" href="/main.css">
-        <!-- <link rel="stylesheet" href="/main.css"> -->
+        <link rel="stylesheet" href="/register.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href=
-        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href=
+            "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     </head>
     <script src="main.js"></script>
     <body>
@@ -20,32 +20,47 @@
                     <img src="/assets/title.png" alt="title" width="300">
                 </h1>
                 <ul class="nav-sects">
-                    <li><a src="/">APARTMENT SEARCH</a></li>
-                    <li><a src="/register.html">LOGIN/SIGNUP</a></li>
-                    <li><a src="/account.html">ACCOUNT</a></li>
+                    <li><a id="search">APARTMENT SEARCH</a></li>
+                    <li><a id="register">LOGIN/SIGNUP</a></li>
+                    <li><a id="account">ACCOUNT</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <h1>ACCOUNT</h1>
-            <h2>Register for an Account</h2>
-            <form action="/register.php" method="POST">
-                <div>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit">Register</button>
-            </form>
+            <div class="container">
+                <div class="form-container">
+                    <div class="create-account">
+                        <h2>CREATE ACCOUNT:</h2>
+                        <form action="create_account.php" method="post">
+                            <label for="fname">FIRST NAME:</label>
+                            <input type="text" id="fname" name="fname" required>
 
+                            <label for="lname">LAST NAME:</label>
+                            <input type="text" id="lname" name="lname" required>
+
+                            <label for="email">EMAIL:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="password">CREATE PASSWORD:</label>
+                            <input type="password" id="password" name="password" required>
+
+                            <button type="submit">CREATE ACCOUNT</button>
+                        </form>
+                    </div>
+                    <div class="login">
+                        <h2>ALREADY HAVE ONE?<br>LOG IN:</h2>
+                        <form action="login.php" method="post">
+                            <label for="email">EMAIL:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="password">PASSWORD:</label>
+                            <input type="password" id="password" name="password" required>
+
+                            <button type="submit">LOG IN</button>
+                    </div>
+                </div>
+            </div>
         </main>
       
         <footer>
