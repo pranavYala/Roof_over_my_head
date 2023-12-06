@@ -1,7 +1,7 @@
 /* Body */
 body {
   font-family: 'Petrona', serif;
-  background-color: #edffce;
+  background-color: #eefada;
   margin: 0;
   padding: 0;
   
@@ -17,8 +17,10 @@ header {
   /* height: 100px; */
 }
 
-header img {
-  background-attachment: fixed;
+header nav h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+  letter-spacing: 1.2px;
 }
 
 nav {
