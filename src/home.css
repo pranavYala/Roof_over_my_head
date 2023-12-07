@@ -69,6 +69,7 @@ input[type=text] {
 .filter .filter-txt {
     margin-top: 15px;
     margin-right: 2px;
+    color: #283f01;
 }
 
 .dropdown {
