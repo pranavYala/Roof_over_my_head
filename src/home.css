@@ -58,9 +58,9 @@ input[type=text] {
     margin-bottom: 10px;
 }
 
-/* .filter {
-    margin-top: 3px;
-} */
+.filter {
+    margin-top: 1px;
+}
 
 .filter .filter-txt {
     margin-top: 15px;
@@ -85,7 +85,6 @@ input[type=text] {
     border: 1.5px solid #0c7575;
     font-weight: bold;
     font-family: 'Petrona', serif;
-    padding: 20px;
     font-size: 13px;
 }
 
