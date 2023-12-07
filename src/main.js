@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var navHome = document.getElementById('register');
     navHome.onclick = function() {
-        window.location.href = 'src/register/register.html';
+        window.location.href = 'register.html';
     };
 });
 
