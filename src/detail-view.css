@@ -3,7 +3,6 @@ body {
     background-color: #fbf9e3;
     margin: 0;
     padding: 0;
-    
   }
 
   header {
@@ -36,7 +35,6 @@ body {
     align-items: center;
     justify-content: center;
     /* text-align: center; */
-  
   }
   
   nav .nav-sects li {
@@ -51,7 +49,6 @@ body {
   
   nav .nav-sects li a {
     text-decoration: none;
-    
     align-items: center;
     justify-content: center;
     font-weight: 700;
@@ -76,7 +73,8 @@ body {
   }
 
   .heading {
-    margin-left: 15%; /* Adjust the left margin as needed */
+    margin-top: 1%;
+    margin-left: 10%; /* Adjust the left margin as needed */
   }
 
   .building-img {
@@ -87,8 +85,30 @@ body {
     justify-content: flex-start;
     overflow: hidden; /* Ensure the image doesn't overflow the container */
     border: 1px solid #ccc; /* Optional: Add a border for better visualization */
-    margin-left: 15%; /* Adjust the left margin as needed */
-    margin-right: 10%; /* Adjust the left margin as needed */
+    margin-left: 1%; /* Adjust the left margin as needed */
+    margin-right: 1%; /* Adjust the left margin as needed */
+  }
+
+  .l-arrow {
+    margin-left: 6%; /* Adjust the left margin as needed */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: green; /* Set arrow color to green */
+    font-size: 4vw; /* Set arrow font size */
+    font-weight: bold; /* Set arrow font weight to bold */
+  }
+
+  .r-arrow {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: green; /* Set arrow color to green */
+    font-size: 4vw; /* Set arrow font size */
+    font-weight: bold; /* Set arrow font weight to bold */
+    margin-right: 11%; /* Adjust the left margin as needed */
   }
 
   .building-img img {
@@ -105,7 +125,7 @@ body {
 
   .building-desc {
     background-color: #e8ebe891;
-    margin-right: 10%; /* Adjust the left margin as needed */
+    margin-right: 7.5%; /* Adjust the left margin as needed */
     width: 50%; /* Adjust the width as needed */
   }
 
@@ -114,25 +134,37 @@ body {
   }
 
   .button-1 {
-    margin-right: 20%; /* Adjust the left margin as needed */
-    margin-left: 50%; /* Adjust the left margin as needed */
+    margin-top: 1%;
+    margin-right: 5%; /* Adjust the left margin as needed */
+    margin-left: 60%; /* Adjust the left margin as needed */
   }
 
   .button-2 {
-    margin-right: 10%; /* Adjust the left margin as needed */
+    margin-top: 1%;
+    margin-right: 20%; /* Adjust the left margin as needed */
   }
 
   button {
-    background-color: #A3D175;
-    color: #283f01;
+    /* margin-top: 10px; */
+    cursor: pointer;
+    background-color: #e6ffcc;
+    color: #0c7575;
     border-radius: 5px;
-    border: 1.5px solid #283f01;
-    padding: 10px 20px;
+    border: 1.5px solid #0c7575;
+    padding: 3px 6px;
     width: fit-content;
-    margin-top: 10px;
     font-weight: bold;
     font-size: 13px;
-    margin: 0 auto;
+    margin-right: 3px;
+    letter-spacing: 0.6px;
+  }
+
+  button:hover {
+    background-color: #A3D175;
+    color: #283f01;
+    border: 1.5px solid #283f01;
+    cursor: pointer;
+    transition: .2s;
   }
 
   button:hover {
