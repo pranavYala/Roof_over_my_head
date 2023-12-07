@@ -58,12 +58,12 @@ input[type=text] {
     margin-bottom: 10px;
 }
 
-.filter {
+/* .filter {
     margin-top: 3px;
-}
+} */
 
 .filter .filter-txt {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-right: 2px;
 }
 
@@ -75,7 +75,7 @@ input[type=text] {
     font-weight: bold;
     font-family: 'Petrona', serif;
     padding: 3px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .filter select {
@@ -86,7 +86,7 @@ input[type=text] {
     font-weight: bold;
     font-family: 'Petrona', serif;
     padding: 20px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 /* Style the arrows in WebKit browsers */
