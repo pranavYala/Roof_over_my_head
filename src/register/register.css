@@ -38,7 +38,7 @@ input {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #A3D175;
-    background-color: #283f0115;
+    background-color: #e8ebe891;
     font-family: 'Petrona', serif;
     color: #283f01;
     font-size: 14px;
@@ -62,7 +62,7 @@ button {
 } */
 
 button:hover {
-    background-color: #283f0143;
+    background-color: #e6ffcc;
     color: #0c7575;
     border: 1.5px solid #0c7575;
     cursor: pointer;

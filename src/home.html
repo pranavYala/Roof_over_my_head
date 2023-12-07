@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Roof Over My Head</title>
         <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="/home.css">
         <!-- <link rel="stylesheet" href="/main.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,8 @@
     <link rel="stylesheet" href=
         "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     </head>
-    <script src="main.js"></script>
+    <script src="src/main.js"></script>
+    <script src="home.js"></script>
     <body>
         <header>
             <nav>
@@ -28,6 +30,59 @@
         </header>
 
         <main>
+            <div class="search-container">
+                <h1>SEARCH FOR A JSM APARTMENT</h1>
+                <h2>Search</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by address">
+                    <button onclick="search()" type="submit" id="searchBtn" class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <h3>OR</h3>
+                <h2>Filter By</h2>
+                <div class="filter-container">
+                    <div class="filter">
+                        <label class="filter-txt" for="bedrooms">Bedrooms:</label>
+                        <select id="bedrooms">
+                            <option value="Select">Select</option>
+                            <option value="studio">Studio</option>
+                            <option value="1">1 Bedroom</option>
+                            <option value="2">2 Bedrooms</option>
+                            <option value="3">3 Bedrooms</option>
+                            <option value="4">4 Bedrooms</option>
+                            <option value="5">5+ Bedrooms</option>
+                        </select>
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-txt" for="bathrooms">Bathrooms:</label>
+                        <select id="bathrooms">
+                            <option value="Select">Select</option>
+                            <option value="0">0 Baths</option>
+                            <option value="1">1 Bath</option>
+                            <option value="2">2 Baths</option>
+                            <option value="3">3 Baths</option>
+                            <option value="4">4 Baths</option>
+                            <option value="5">5+ Baths</option>                            
+                        </select>
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-txt" for="rent-min">Min Rent:</label>
+                        <input class="dropdown" type="number" id="rent-min" placeholder="600" min="600" max="3000">
+                    </div>
+            
+                    <div class="filter">
+                        <label class="filter-txt" for="rent-max">Max Rent:</label>
+                        <input class="dropdown" type="number" id="rent-max" placeholder="3000" min="600" max="3000">
+                    </div>
+
+                    <div>
+                        <button onclick="applyFilters()">Apply</button>
+                        <button onclick="clearFilters()">CLEAR</button>
+                    </div>
+                </div>
+            </div>
             
         </main>
 
