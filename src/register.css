@@ -11,11 +11,11 @@
 }
 
 .create-account, .login {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #283f01;
+    box-shadow: 0 0 10px #a3d1756d;
     width: 400px;
 }
 
@@ -37,7 +37,7 @@ input {
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #7cc42c;
+    border: 1px solid #A3D175;
     background-color: #283f0115;
     font-family: 'Petrona', serif;
     color: #283f01;
