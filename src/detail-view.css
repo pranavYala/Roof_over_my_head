@@ -1,4 +1,4 @@
-body {
+  body {
     font-family: 'Petrona', serif;
     background-color: #fbf9e3;
     margin: 0;
@@ -126,10 +126,36 @@ body {
   .building-desc {
     background-color: #e8ebe891;
     margin-right: 7.5%; /* Adjust the left margin as needed */
-    width: 50%; /* Adjust the width as needed */
+    width: 46vw; /* Adjust the width as needed */
+    height: 20vh;
+  }
+
+  .apt-container {
+    margin-top: 4vh;
+    display: flex; /* Use flexbox to make the children align horizontally */
+    background-color: #e8ebe891;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+  }
+
+  .apt-img {
+    width: 35%; /* Fixed width */
+    height: 35%; /* Fixed height to make it a square */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    border: 1px solid #ccc; /* Optional: Add a border for better visualization */
+    margin-left: 1%; /* Adjust the left margin as needed */
+    margin-right: 1%; /* Adjust the left margin as needed */
   }
 
   .button-container {
+    margin-right: 23vw;
+    align-items: center;
+    margin-top: 1vh;
     display: flex; /* Use flexbox to make the children align horizontally */
   }
 
@@ -137,11 +163,13 @@ body {
     margin-top: 1%;
     margin-right: 5%; /* Adjust the left margin as needed */
     margin-left: 60%; /* Adjust the left margin as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
   }
 
   .button-2 {
     margin-top: 1%;
     margin-right: 20%; /* Adjust the left margin as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
   }
 
   button {
