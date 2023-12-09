@@ -19,12 +19,11 @@
   .l-arrow {
     margin-left: 6%; /* Adjust the left margin as needed */
     display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    color: green; /* Set arrow color to green */
+    color: #0c7575; /* Set arrow color to green */
     font-size: 4vw; /* Set arrow font size */
     font-weight: bold; /* Set arrow font weight to bold */
+    background-color: #e6ffcc;
+    border: 1px solid #0c7575;    
   }
 
   .r-arrow {
@@ -36,6 +35,8 @@
     font-size: 4vw; /* Set arrow font size */
     font-weight: bold; /* Set arrow font weight to bold */
     margin-right: 11%; /* Adjust the left margin as needed */
+    background-color: #e6ffcc;
+    border: 1px solid #0c7575;
   }
 
   .building-img img {
