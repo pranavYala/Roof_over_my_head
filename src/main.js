@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var navHome = document.getElementById('detail');
-    navHome.onclick = function() {
-        window.location.href = 'detail-view.html';
-    };
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     var navHome = document.getElementById('detail');
+//     navHome.onclick = function() {
+//         window.location.href = 'detail-view.html';
+//     };
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var navHome = document.getElementById('queue');
-    navHome.onclick = function() {
-        window.location.href = 'queue.html';
-    };
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     var navHome = document.getElementById('queue');
+//     navHome.onclick = function() {
+//         window.location.href = 'queue.html';
+//     };
+// });
