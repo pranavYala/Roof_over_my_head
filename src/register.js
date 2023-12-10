@@ -5,6 +5,10 @@ async function checkPassword() {
         var userEmail = email;
         const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/users/?where={"email": "${email}"}`);
         const data = await response.json();
+        if (!data.data[0]) {
+            alert("Login failed");
+            return null;
+        }
         var pass = data.data[0].password;
         console.log(pass);
         var password = document.getElementById("password-login").value;
@@ -52,4 +56,5 @@ async function createUser() {
             "Content-type": "application/json; charset=UTF-8"
         }
     });
+    alert("User created");
 }
