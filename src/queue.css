@@ -1,4 +1,42 @@
 
+body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+  
+  /* header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-left: 20px;
+  } */
+  
+  /* nav {
+    margin-left: auto;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+  }
+   */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin-top: 43px;
+}
+
+  main {
+    padding: 20px 0;
+  }
   
   section {
     margin-bottom: 20px;
