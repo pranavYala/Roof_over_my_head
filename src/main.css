@@ -1,7 +1,7 @@
 /* Body */
 body {
   font-family: 'Petrona', serif;
-  background-color: #eefada;
+  background-color: #fbf9e3;
   margin: 0;
   padding: 0;
   
@@ -21,6 +21,8 @@ header nav h1 {
   font-size: xx-large;
   font-weight: bolder;
   letter-spacing: 1.2px;
+  margin-left: 9%;
+  margin-right: 10%;
 }
 
 nav {
@@ -37,18 +39,19 @@ nav .nav-sects {
   gap: 2%;
   align-items: center;
   justify-content: center;
+  flex: 1;
   /* text-align: center; */
 
 }
 
 nav .nav-sects li {
-  margin-right: 20px;
+  margin-right: 10px;
   padding: 10px;
   padding-top: 13px;
   text-align: center;
-  border: #edffce 4px solid;
+  border: #fbf9e3 4px solid;
   border-radius: 4px;
-  color: #edffce;
+  color: #fbf9e3;
 }
 
 nav .nav-sects li a {
@@ -69,7 +72,7 @@ nav .nav-sects li:hover {
 }
 
 header nav h1 {
-  color: #edffce;
+  color: #fbf9e3;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +93,7 @@ footer {
 }
 
 footer h2 {
-  color: #edffce;
+  color: #fbf9e3;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +103,7 @@ footer h2 {
 }
 
 .f-title {
-  color: #edffce;
+  color: #fbf9e3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +142,7 @@ footer h2 {
 .icon i {
   font-size: 2em;
   padding: 3%;
-  color: #edffce;
+  color: #fbf9e3;
 }
 
 .icon i:hover {
@@ -154,7 +157,7 @@ footer h2 {
 .icon p {
   margin: 0;
   letter-spacing: 1px;
-  color: #edffce;
+  color: #fbf9e3;
 }
 
 .fa-instagram::before {

@@ -11,11 +11,11 @@
 }
 
 .create-account, .login {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #283f01;
+    box-shadow: 0 0 10px #a3d1756d;
     width: 400px;
 }
 
@@ -31,14 +31,15 @@ form {
 label {
     font-style: italic;
     color: #0c7575;
+    letter-spacing: .5px;
 }
 
 input {
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #7cc42c;
-    background-color: #283f0115;
+    border: 1px solid #A3D175;
+    background-color: #e8ebe891;
     font-family: 'Petrona', serif;
     color: #283f01;
     font-size: 14px;
@@ -55,6 +56,7 @@ button {
     font-weight: bold;
     font-size: 13px;
     margin: 0 auto;
+    letter-spacing: .6px;
 }
 
 /* button span {
@@ -62,7 +64,7 @@ button {
 } */
 
 button:hover {
-    background-color: #283f0143;
+    background-color: #e6ffcc;
     color: #0c7575;
     border: 1.5px solid #0c7575;
     cursor: pointer;
