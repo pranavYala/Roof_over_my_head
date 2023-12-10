@@ -31,7 +31,8 @@ async function loadUserData() {
             fetchAptData(email);
         } else {
             //console.log("No user email found")
-            alert("Error loading user data");
+            alert("Please log in first");
+            window.location.href = "register.html";
             console.error("Error loading user data");
         }
     } catch (error) {
