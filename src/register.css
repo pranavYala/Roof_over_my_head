@@ -1,9 +1,13 @@
+/* main {
+    margin-bottom: 52.7px;
+} */
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     /* height: 100vh; */
-    margin-top: 43px;
+    margin-top: 6%;
 }
 
 .form-container {
