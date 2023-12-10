@@ -45,7 +45,7 @@
                         <label class="filter-txt" for="bedrooms">Bedrooms:</label>
                         <select id="bedrooms">
                             <option value="Select">Select</option>
-                            <option value="studio">Studio</option>
+                            <option value="0">Studio</option>
                             <option value="1">1 Bedroom</option>
                             <option value="2">2 Bedrooms</option>
                             <option value="3">3 Bedrooms</option>
@@ -69,12 +69,12 @@
 
                     <div class="filter">
                         <label class="filter-txt" for="rent-min">Min Rent:</label>
-                        <input class="dropdown" type="number" id="rent-min" placeholder="600" min="600" max="3000">
+                        <input class="dropdown" type="number" id="rent-min" value="600" min="600" max="3000">
                     </div>
             
                     <div class="filter">
                         <label class="filter-txt" for="rent-max">Max Rent:</label>
-                        <input class="dropdown" type="number" id="rent-max" placeholder="3000" min="600" max="3000">
+                        <input class="dropdown" type="number" id="rent-max" value="3000" min="600" max="3000">
                     </div>
 
                     <div>
@@ -83,6 +83,8 @@
                     </div>
                 </div>
             </div>
+
+            <div id="apt-container"></div>
             
         </main>
 
