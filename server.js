@@ -13,6 +13,10 @@ app.get('/queue', (req, res) => {
     res.sendFile(path.join(__dirname, './src/', 'queue.html'));
 });
 
+app.get('/queue', (req, res) => {
+    res.sendFile(path.join(__dirname, './src/', 'detail-view.html'));
+});
+
 // handle export(currently export json file)
 app.get('/export', function(req, res) {
     const databasePath = path.join(__dirname, 'database', 'database_current.json');
