@@ -13,7 +13,7 @@ h3 {
     margin-top: 25px;
     font-style: italic;
     letter-spacing: 2.5px;
-    color: #283f01;
+    color: #0c7575;
 } 
 
 .search-container h1 {
@@ -141,32 +141,46 @@ input[type=text] {
 
 ul {
     list-style-type: none;
+    color: #0c7575;
 }
 
 .apt-list {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
+    flex-wrap: wrap;
+    justify-content: space-between;
     column-count: 2;
     column-gap: 5vw;
+    color: #0c7575;
+    
 }
 
 .apt-list li {
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 20px; 
+    color:#0c7575;
+    box-shadow: 0 0 10px #A3D175;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
+}
+
+.apt-list li:hover {
+    transform: scale(1.05);
+}
+
+.apt-list li a {
+    color:#0c7575;
+    text-decoration: none;
 }
   
 .apt-list img {
-    width: 100%; 
-    max-width: 300px; 
+    width: 100%;
+    max-width: 300px;
     height: auto;
-    margin-bottom: 10px; 
-}
-
-.apt-list h4 {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
