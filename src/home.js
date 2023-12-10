@@ -13,7 +13,6 @@ async function search() {
 async function renderResults(obj) {
     const container = document.getElementById('apt-container');
 
-    // Clear previous content
     container.innerHTML = '';
 
     const resultHtml = document.createElement('ul');
@@ -36,7 +35,6 @@ async function renderResults(obj) {
         resultHtml.appendChild(listItem);
     })
 
-    // Append the generated HTML to the container
     container.appendChild(resultHtml);
 }
 
@@ -71,7 +69,6 @@ async function applyFilters() {
 
 
 function clearFilters() {
-    // Implement clear filters functionality
     document.getElementById('bedrooms').value = 'Select';
     document.getElementById('bathrooms').value = 'Select';
     document.getElementById('rent-min').value = '600';

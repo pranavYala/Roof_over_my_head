@@ -40,6 +40,12 @@
     margin-left: .6%;
   }
 
+  .l-arrow:hover, .r-arrow:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+  }
+
+
   .building-img img {
     max-width: 100%; 
     height: auto; 

@@ -3,9 +3,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 50px; */
-    /* margin-bottom: 121px; */
-
 }
 
 .search-container {
@@ -49,7 +46,6 @@ input[type=text] {
     font-style: italic;
     font-family: 'Petrona', serif;
     letter-spacing: .2px;
-    /* font-size: 14px; */
 }
 
 .filter-container {
@@ -123,7 +119,6 @@ input[type=text] {
 }
 
 .search-button {
-    /* margin-top: 10px; */
     cursor: pointer;
     background-color: #e6ffcc;
     color: #0c7575;
