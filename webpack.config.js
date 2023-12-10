@@ -6,6 +6,12 @@ module.exports = {
     filename: 'bundle.js', // The name of the output bundle
     path: path.resolve(__dirname, 'dist'), // Output directory (it will be created if it doesn't exist)
   },
+  resolve: {
+    fallback: {
+      path: require.resolve('path-browserify'),
+      url: require.resolve('url/'),
+    }
+  }
   module: {
     rules: [
       {
