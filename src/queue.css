@@ -1,41 +1,26 @@
-
-body {
-    font-family: sans-serif;
-    margin: 0;
-  }
-  
-  /* header {
-    display: flex;
-    align-items: center;
-    padding: 20px 0;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-    margin-left: 20px;
-  } */
-  
-  /* nav {
-    margin-left: auto;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: black;
-    margin-right: 20px;
-  }
-   */
-
 .container {
-    display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
-    margin-top: 43px;
+}
+
+.info {
+  font-style: italic;
+  font-size: 18px;
+  background-color: #e8ebe891;
+  padding: 5px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
   main {
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4%;
+    color: #283f01;
   }
   
   section {
@@ -46,6 +31,13 @@ body {
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
+
+  .join {
+    margin-bottom: 3.5%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   
   section a {
     text-decoration: none;
@@ -54,16 +46,52 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
   }
-  
-  footer {
-    text-align: center;
-    padding: 20px 0;
+
+  .queue {
+    background-color: #A3D175;
+    color: #283f01;
+    border-radius: 5px;
+    border: 1.5px solid #283f01;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+    letter-spacing: 1px;
   }
-  
-  footer p {
-    margin-bottom: 0;
+
+  .queue:hover {
+    background-color: #283f0156;
+    color: #0c7575;
+    border: 1.5px solid #0c7575;
+    cursor: pointer;
+    transition: .2s;
+}
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
-  
-  img {
-    max-width: 100%;
-  }
+
+  .return {
+    cursor: pointer;
+    background-color: #e6ffcc;
+    color: #0c7575;
+    border-radius: 5px;
+    border: 1.5px solid #0c7575;
+    padding: 3px 6px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: .6px;
+    margin-top: 5px;
+}
+
+.return:hover {
+    background-color: #A3D175;
+    color: #283f01;
+    border: 1.5px solid #283f01;
+    cursor: pointer;
+    transition: .2s;
+}
