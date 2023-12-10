@@ -1,3 +1,5 @@
+let currentIdx = 0;
+
 async function getObj() {
   try {
       const currentUrl = window.location.href;
@@ -13,10 +15,41 @@ async function getObj() {
     }
 }
 
+function changeImage(idxOffset, obj, imgElement) {
+  currentIdx += idxOffset;
+
+  if (currentIdx < 0) {
+    currentIdx = obj.buildingImages.length - 1;
+  } else if (currentIdx >= obj.buildingImages.length) {
+    currentIdx = 0;
+  }
+
+  imgElement.src = obj.buildingImages[currentIdx];
+}
+
+function changeImage2(idxOffset, obj, imgElement2) {
+  currentIdx += idxOffset;
+
+  if (currentIdx < 0) {
+    currentIdx = obj.apartmentImages.length - 1;
+  } else if (currentIdx >= obj.apartmentImages.length) {
+    currentIdx = 0;
+  }
+
+  imgElement2.src = obj.apartmentImages[currentIdx];
+}
+
+function getDirections(obj) {
+  const address = obj.address;
+  
+  const mapsUrl = `https://www.google.com/maps?q=${address}`;
+
+  window.open(mapsUrl, '_blank');
+}
+
 async function renderResults(obj) {
     const container = document.getElementById('building-info');
 
-    // Clear previous content
     container.innerHTML = '';
 
     const headingContainer = document.createElement('div');
@@ -41,7 +74,8 @@ async function renderResults(obj) {
     lArrowContainer.className = 'l-arrow';
 
     const lArrowPElement = document.createElement('p');
-    lArrowPElement.textContent = '\u003C'; // Unicode for "<"
+    lArrowPElement.textContent = '\u003C';
+    lArrowPElement.addEventListener('click', () => changeImage(-1, obj, imgElement));
     lArrowContainer.appendChild(lArrowPElement);
 
     buildingContainer.appendChild(lArrowContainer);
@@ -60,7 +94,8 @@ async function renderResults(obj) {
     rArrowContainer.className = 'r-arrow';
 
     const rArrowPElement = document.createElement('p');
-    rArrowPElement.textContent = '\u003E'; // Unicode for ">"
+    rArrowPElement.textContent = '\u003E'; 
+    rArrowPElement.addEventListener('click', () => changeImage(1, obj, imgElement));
     rArrowContainer.appendChild(rArrowPElement);
 
     buildingContainer.appendChild(rArrowContainer);
@@ -82,6 +117,7 @@ async function renderResults(obj) {
 
     const button1 = document.createElement('button');
     button1.textContent = 'GET DIRECTIONS';
+    button1.addEventListener('click', () => getDirections(obj));
     buttonContainer.appendChild(button1);
 
     descButtonsContainer.appendChild(buttonContainer);
@@ -94,42 +130,30 @@ async function renderResults(obj) {
 
     const aptContainer = document.getElementById('apt-container');
 
-    // Clear previous content
     aptContainer.innerHTML = '';
 
     const lArrowContainer2 = document.createElement('div');
     lArrowContainer2.className = 'l-arrow';
-
-    //const prevLink = document.createElement('a');
     
-    //prevLink.href = `/detail-view/${parseInt(itemId, 10) - 1}`;
-    //prevLink.className = 'prev';
-    //prevLink.textContent = ' \u003C '; // Unicode for "<"
-    //lArrowContainer2.appendChild(prevLink);
-
     const lArrowPElement2 = document.createElement('p');
-    lArrowPElement2.textContent = '\u003C'; // Unicode for "<"
+    lArrowPElement2.textContent = '\u003C'; 
+    lArrowPElement2.addEventListener('click', () => changeImage2(-1, obj, imgElement2));
     lArrowContainer2.appendChild(lArrowPElement2);
-
+    
     const aptImgContainer = document.createElement('div');
     aptImgContainer.className = 'apt-img';
-
+    
     const imgElement2 = document.createElement('img');
     imgElement2.src = obj.apartmentImages[0];
     imgElement2.alt = 'Apt Image';
     aptImgContainer.appendChild(imgElement2);
-
+    
     const rArrowContainer2 = document.createElement('div');
     rArrowContainer2.className = 'r-arrow';
-
-    //const nextLink = document.createElement('a');
-    //nextLink.href = `/detail-view/${parseInt(itemId, 10) + 1}`;
-    //nextLink.className = 'next';
-    //nextLink.textContent = ' \u003E '; // Unicode for ">"
-    //rArrowContainer2.appendChild(nextLink);
-
+    
     const rArrowPElement2 = document.createElement('p');
-    rArrowPElement2.textContent = '\u003E'; // Unicode for ">"
+    rArrowPElement2.textContent = '\u003E'; 
+    rArrowPElement2.addEventListener('click', () => changeImage2(1, obj, imgElement2));
     rArrowContainer2.appendChild(rArrowPElement2);
 
     const aptDescContainer = document.createElement('div');
@@ -177,7 +201,6 @@ async function renderResults(obj) {
 
     aptDescContainer.appendChild(amenitiesList);
 
-    // Append the buildingInfoContainer to the aptContainer
     aptContainer.appendChild(lArrowContainer2);
     aptContainer.appendChild(aptImgContainer);
     aptContainer.appendChild(rArrowContainer2);
