@@ -35,7 +35,8 @@ async function addQueue() {
                 method: "PUT",
                 body: JSON.stringify({
                     email: useremail,
-                    queuePosition: maxQueue + 1
+                    queuePosition: maxQueue + 1,
+                    queueRequest: buidlingid
                 }),
                 headers: {
                     "Content-type": "application/json; charset=UTF-8"

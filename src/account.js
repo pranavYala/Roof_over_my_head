@@ -195,19 +195,26 @@ async function logout(){
 async function leaveQueue(){
     await updateUserData("queuePosition", -1);
     localStorage.removeItem("queuePosition");
-    var buidlingid = localStorage.getItem("buildingId"); //"65756b1129a389002a857918";
-    var responce4 = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/${buidlingid}`, {
-        method: "PUT",
-        body: JSON.stringify({
-            _id: buidlingid,
-            // queuePosition: maxQueue + 1
-            available: data.data.available - 1
-            }),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        });
-    alert("Left queue");
+    var email = localStorage.getItem("userEmail");
+    const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/users/?where={"email": "${email}"}`);
+    var data = await response.json()
+    var buildingid = data.data[0].queueRequest; //"65756b1129a389002a857918";
+
+    var responce4 = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/${buildingid}`);
+    var responceData = await responce4.json();
+    var responce2 = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/${buildingid}`, {
+                method: "PUT",
+                body: JSON.stringify({
+                    _id: buildingid,
+                    // queuePosition: maxQueue + 1
+                    available: responceData.data.available + 1
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            });
+    //console.log(responce4.data.available)
+    // alert("Left queue");
     window.location.href = "account.html";
 }
 
