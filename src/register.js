@@ -15,6 +15,7 @@ async function checkPassword() {
         if (password == pass) {
             alert("Login successful");
             localStorage.setItem("userEmail", userEmail);
+            localStorage.setItem("userId", data.data[0]._id);
             // return email;
         } else {
             alert("Login failed");
