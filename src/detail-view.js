@@ -127,8 +127,6 @@ async function renderResults(obj) {
 
     container.appendChild(buildingContainer);
 
-    //////////////////////////////////////////////////////////////////////
-
     const aptContainer = document.getElementById('apt-container');
 
     aptContainer.innerHTML = '';
