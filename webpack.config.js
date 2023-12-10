@@ -11,7 +11,7 @@ module.exports = {
       path: require.resolve('path-browserify'),
       url: require.resolve('url/'),
     }
-  }
+  },
   module: {
     rules: [
       {
