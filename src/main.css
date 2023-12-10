@@ -4,7 +4,10 @@ body {
   background-color: #fbf9e3;
   margin: 0;
   padding: 0;
-  
+  /* position: relative; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -23,6 +26,10 @@ header nav h1 {
   letter-spacing: 1.2px;
   margin-left: 9%;
   margin-right: 10%;
+  color: #fbf9e3;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
@@ -60,24 +67,17 @@ nav .nav-sects li a {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  transition: color .2s ease-in-out;
+  transition: .2s ease-in;
   letter-spacing: .7px;
 }
 
 nav .nav-sects li:hover {
+  background-color: #A3D175;
   border: #A3D175 4px solid;
-  border-radius: 4px;
-  color: #A3D175;
+  border-radius: 25px;
+  color: #0c7575;
   font-weight: 900;
-}
-
-header nav h1 {
-  color: #fbf9e3;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-style: bolder;
 }
 
 footer {
@@ -87,9 +87,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  height: 5rem;
+  /* position: absolute;
+  bottom: 0; */
+  margin-top: auto;
 }
 
 footer h2 {
@@ -184,6 +186,6 @@ a:hover {
   cursor: pointer;
 }
 
-main {
-  flex: 1;
-}
+/* main {
+  padding-bottom: 5rem;
+} */

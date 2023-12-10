@@ -12,89 +12,91 @@
         <link rel="stylesheet" href=
             "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     </head>
-    <script src="main.js"></script>
     <body>
-        <header>
-            <nav>
-                <h1>
-                    ROOF OVER MY HEAD
-                </h1>
-                <ul class="nav-sects">
-                    <li><a id="search">APARTMENT SEARCH</a></li>
-                    <li><a id="register">LOGIN/SIGNUP</a></li>
-                    <li><a id="account">ACCOUNT</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <h1>ACCOUNT</h1>
-            <div class="container">
-                <div class="form-container">
-                    <div class="user-info">
+        <body>
+            <header>
+                <nav>
+                    <h1>
+                        ROOF OVER MY HEAD
+                    </h1>
+                    <ul class="nav-sects">
+                        <li><a id="search">APARTMENT SEARCH</a></li>
+                        <li><a id="register">LOGIN/SIGNUP</a></li>
+                        <li><a id="account">ACCOUNT</a></li>
+                    </ul>
+                </nav>
+            </header>
+    
+            <main>
+                <h1 class="title">ACCOUNT</h1>
+                <div class="container">
+                    <div class="user-info-container">
                         <h2>USER INFORMATION</h2>
-                        <form action="create_account.php" method="post">
-                            <label for="fname">FIRST NAME:</label>
-                            <input type="text" id="fname" name="fname" required>
-
-                            <label for="lname">LAST NAME:</label>
-                            <input type="text" id="lname" name="lname" required>
-
-                            <label for="email">EMAIL:</label>
-                            <input type="email" id="email" name="email" required>
-
-                            <label for="password">CREATE PASSWORD:</label>
-                            <input type="password" id="password" name="password" required>
-
-                            <button type="submit">CREATE ACCOUNT</button>
-                        </form>
+                        <div class="user-info">
+                            <h3>HELLO, <span id="userName"></span></h3>
+                        </div>
+                        <div class="user-info">
+                            <h3>EMAIL: <span id="userEmail"></span></h3>
+                            <button class="edit" id="edit-email">EDIT</button>
+                            <button class="save" id="save-email">SAVE</button>
+                        </div>
+                        <div class="user-info">
+                            <h3>PASSWORD: <span id="userPassword"></span></h3>             
+                            <button class="edit" id="edit-pass">EDIT</button>
+                            <button class="save" id="save-pass">SAVE</button>
+                        </div>
                     </div>
-                    <div class="login">
-                        <h2>ALREADY HAVE ONE?<br>LOG IN:</h2>
-                        <form action="login.php" method="post">
-                            <label for="email">EMAIL:</label>
-                            <input type="email" id="email" name="email" required>
-
-                            <label for="password">PASSWORD:</label>
-                            <input type="password" id="password" name="password" required>
-
-                            <button type="submit">LOG IN</button>
-                    </div>
-                </div>
-            </div>
-        </main>
-      
-        <footer>
-            <div class="f-title">
-                <img src="/assets/logo.png" alt="logo">
-                <h2>ROOF OVER MY HEAD</h2>
-            </div>
-            <div class="contact">
-                <div class="social-icons">
-                    <div class="icon">
-                        <a href="https://www.instagram.com/jsmliving/" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <p class="ig-txt">@jsmliving</p>
-                    </div>
-                    <div class="icon">
-                        <a href="mailto:jsm@jsmliving.com" target="_blank">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <p>jsm@jsmliving.com</p>
-                    </div>
-                    <div class="icon">
-                        <a href="tel:+12176108203" target="_blank">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <p>(217) 610-8203</p>
+                    <div class="apt-info-container">
+                        <h2>APARTMENT INFORMATION</h2>
+                        <div class="user-info">
+                            <h3>HELLO <span id="userName"></span></h3>
+                        </div>
+                        <div class="user-info">
+                            <h3>EMAIL <span id="userEmail"></span></h3>
+                            <button class="edit" id="edit-email">EDIT</button>
+                            <button class="save" id="save-email">SAVE</button>
+                        </div>
+                        <div class="user-info">
+                            <h3>PASSWORD <span id="userPassword"></span></h3>             
+                            <button class="edit" id="edit-pass">EDIT</button>
+                            <button class="save" id="save-pass">SAVE</button>
+                        </div>
                     </div>
                 </div>
-                <h2>CONTACT US</h2>
-            </div>
-                
-        </footer>
-        
-        
+            </main>
+          
+            <footer>
+                <div class="f-title">
+                    <img src="/assets/logo.png" alt="logo">
+                    <h2>ROOF OVER MY HEAD</h2>
+                </div>
+                <div class="contact">
+                    <div class="social-icons">
+                        <div class="icon">
+                            <a href="https://www.instagram.com/jsmliving/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <p class="ig-txt">@jsmliving</p>
+                        </div>
+                        <div class="icon">
+                            <a href="mailto:jsm@jsmliving.com" target="_blank">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <p>jsm@jsmliving.com</p>
+                        </div>
+                        <div class="icon">
+                            <a href="tel:+12176108203" target="_blank">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <p>(217) 610-8203</p>
+                        </div>
+                    </div>
+                    <h2>CONTACT US</h2>
+                </div>
+                    
+            </footer>
+            <script src="main.js"></script>
+            <script src="register.js"></script>
+            <script src="account.js"></script>
     </body>
 </html>
