@@ -152,22 +152,10 @@
   }
 
   .button-container {
-    margin-right: 23vw;
+    margin-left: 40%;
     align-items: center;
     margin-top: 1vh;
     display: flex; /* Use flexbox to make the children align horizontally */
-  }
-
-  .button-1 {
-    margin-top: 1%;
-    margin-right: 5%; /* Adjust the left margin as needed */
-    margin-left: 60%; /* Adjust the left margin as needed */
-    white-space: nowrap; /* Prevent text from wrapping */
-  }
-
-  .button-2 {
-    margin-top: 1%;
-    margin-right: 20%; /* Adjust the left margin as needed */
     white-space: nowrap; /* Prevent text from wrapping */
   }
 

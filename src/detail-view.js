@@ -80,23 +80,9 @@ async function renderResults(obj) {
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'button-container';
 
-    const button1Container = document.createElement('div');
-    button1Container.className = 'button-1';
-
     const button1 = document.createElement('button');
     button1.textContent = 'GET DIRECTIONS';
-    button1Container.appendChild(button1);
-
-    buttonContainer.appendChild(button1Container);
-
-    const button2Container = document.createElement('div');
-    button2Container.className = 'button-2';
-
-    const button2 = document.createElement('button');
-    button2.textContent = 'BACK TO SEARCH';
-    button2Container.appendChild(button2);
-
-    buttonContainer.appendChild(button2Container);
+    buttonContainer.appendChild(button1);
 
     descButtonsContainer.appendChild(buttonContainer);
 
