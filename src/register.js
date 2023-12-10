@@ -41,4 +41,5 @@ async function createUser() {
             "Content-type": "application/json; charset=UTF-8"
         }
     });
+    alert("User created");
 }
