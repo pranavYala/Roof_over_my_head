@@ -2,10 +2,7 @@
 async function search() {
     try {
         let searchInputVal = document.getElementById('searchInput').value;
-        const searchValCleaned = searchInputVal.replace(/[^a-zA-Z0-9 ]/g, "").toLowerCase();
-        console.log(searchValCleaned);
-        //change this variable to use cleaned
-        const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/?where={"name": "${searchInputVal}"}`);
+        const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/?where={"lowerCaseName": "${searchInputVal.toLowerCase()}"}`);
         const obj = await response.json();
         renderResults(obj);
       } catch (error) {
@@ -14,7 +11,6 @@ async function search() {
 }
 
 async function renderResults(obj) {
-    console.log(obj);
     const container = document.getElementById('apt-container');
 
     // Clear previous content
@@ -29,14 +25,14 @@ async function renderResults(obj) {
         listItem.className = 'apt';
 
         const link = document.createElement('a');
-        link.href = `/detail-view/` + item._id;
+        link.href = `/detail-view.html?_id=` + item._id;
         link.appendChild(document.createElement('img')).src = item.buildingImages[0];
         link.appendChild(document.createElement('h3')).textContent = item.name;
-        link.appendChild(document.createElement('h4')).textContent = "Rent: $" + item.rent;
-        link.appendChild(document.createElement('h4')).textContent = item.bed + " Beds\t" + item.bath + " Baths";
 
 
         listItem.appendChild(link);
+        listItem.appendChild(document.createElement('h4')).textContent = "Rent: $" + item.rent;
+        listItem.appendChild(document.createElement('h4')).textContent = item.bed + " Beds & " + item.bath + " Baths";
         resultHtml.appendChild(listItem);
     })
 
@@ -45,19 +41,34 @@ async function renderResults(obj) {
 }
 
 async function applyFilters() {
-    try {
-        let bedroomsValue = document.getElementById('bedrooms').value;
-        let bathroomsValue = document.getElementById('bathrooms').value;
-        let rentMinValue = document.getElementById('rent-min').value;
-        let rentMaxValue = document.getElementById('rent-max').value;
+  try {
+      let bedroomsValue = document.getElementById('bedrooms').value;
+      let bathroomsValue = document.getElementById('bathrooms').value;
+      let rentMinValue = document.getElementById('rent-min').value;
+      let rentMaxValue = document.getElementById('rent-max').value;
 
-        const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/?where={"bed": ${bedroomsValue}, "bath": ${bathroomsValue}, "rent": {"$gte": ${rentMinValue}, "$lte": ${rentMaxValue}}}`);        
-        const obj = await response.json();
-        renderResults(obj);
-      } catch (error) {
-        console.log(error);
+      let filterCriteria = {};
+
+      if (bedroomsValue !== "Select") {
+          filterCriteria.bed = bedroomsValue;
       }
+
+      if (bathroomsValue !== "Select") {
+          filterCriteria.bath = bathroomsValue;
+      }
+
+      filterCriteria.rent = { "$gte": rentMinValue, "$lte": rentMaxValue };
+
+      const queryString = `https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/?where=${JSON.stringify(filterCriteria)}`;
+      const response = await fetch(queryString);
+
+      const obj = await response.json();
+      renderResults(obj);
+  } catch (error) {
+      console.log(error);
+  }
 }
+
 
 function clearFilters() {
     // Implement clear filters functionality
@@ -65,4 +76,5 @@ function clearFilters() {
     document.getElementById('bathrooms').value = 'Select';
     document.getElementById('rent-min').value = '600';
     document.getElementById('rent-max').value = '3000';
+    document.getElementById('apt-container').innerHTML = '';
 }
