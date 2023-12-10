@@ -26,6 +26,14 @@ async function createUser() {
     var firstname = document.getElementById("fname").value;
     var lastname = document.getElementById("lname").value;
 
+    const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/users/?where={"email": "${email}"}`);
+    const data = await response.json();
+
+    if(data.data[0]){
+        alert("User already exists");
+        return;
+    }
+
     var responce = await fetch("https://final-409-api-8d436d40ed6c.herokuapp.com/api/users", {
         method: "POST",
         body: JSON.stringify({
