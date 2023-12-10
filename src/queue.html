@@ -13,6 +13,7 @@
             "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     </head>
     <script src="main.js"></script>
+    <script src="queue.js"></script>
     <body>
         <header>
             <nav>
@@ -30,23 +31,22 @@
         <main>
           
           <body>
-          
-            
-          
+ 
             <main>
-              <section id="join-the-queue">
-                <h2>Join the Queue</h2>
-                <p>Queues are based on a first come first serve process. We assign leases to be signed upon completion of the leasing application in the order of the queue.</p>
-                <a href="#">JOIN THE QUEUE</a>
+              <section class="join">
+                <h1>JOIN THE QUEUE</h1>
+                <p class="info">Queues are based on a first come first serve process. We assign leases to be signed upon completion of the leasing application in the order of the queue.</p>
+                <div class="buttons">
+                    <button class="return" onclick="window.location.href='home.html'">RETURN TO SEARCH</button>
+                    <button class="return" onclick="window.location.href='detail-view.html'">RETURN TO SEARCH</button>
+                </div>
               </section>
           
-              <section id="total-number-of-tenants">
-                <h2>Total Number of Tenants</h2>
-                <p>Current Length</p>
-                <a href="#">ADD ROOMMATE INFORMATION</a>
+              <section class="tenants">
+                <h1></h1>
+                <button class="queue" onclick="addQueue()">JOIN THE QUEUE</button>
               </section>
             </main>
-          
 
         </main>
 
