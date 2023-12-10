@@ -123,13 +123,13 @@
     letter-spacing: 0.6px;
   }
 
-  button:hover {
+  /* button:hover {
     background-color: #A3D175;
     color: #283f01;
     border: 1.5px solid #283f01;
     cursor: pointer;
     transition: .2s;
-  }
+  } */
 
   button:hover {
     background-color: #283f0143;
@@ -138,3 +138,31 @@
     cursor: pointer;
     transition: .2s;
   }
+
+  .queue {
+    background-color: #A3D175;
+    color: #283f01;
+    border-radius: 5px;
+    border: 1.5px solid #283f01;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .queue:hover {
+    background-color: #283f0156;
+    color: #0c7575;
+    border: 1.5px solid #0c7575;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.join-queue {
+  margin-top: .7%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
