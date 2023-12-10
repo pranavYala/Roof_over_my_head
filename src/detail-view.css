@@ -92,11 +92,12 @@
   .l-arrow {
     margin-left: 6%; /* Adjust the left margin as needed */
     display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     color: #0c7575; /* Set arrow color to green */
     font-size: 4vw; /* Set arrow font size */
     font-weight: bold; /* Set arrow font weight to bold */
-    background-color: #e6ffcc;
-    border: 1px solid #0c7575;    
   }
 
   .r-arrow {
@@ -108,8 +109,6 @@
     font-size: 4vw; /* Set arrow font size */
     font-weight: bold; /* Set arrow font weight to bold */
     margin-right: 11%; /* Adjust the left margin as needed */
-    background-color: #e6ffcc;
-    border: 1px solid #0c7575;
   }
 
   .building-img img {
@@ -141,13 +140,12 @@
     padding-bottom: 3vh;
   }
 
-  .apt-img {
-    width: 35%; /* Fixed width */
-    height: 35%; /* Fixed height to make it a square */
+  .apt-img img {
+    max-width: 30vw;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden; /* Ensure the image doesn't overflow the container */
     border: 1px solid #ccc; /* Optional: Add a border for better visualization */
     margin-left: 1%; /* Adjust the left margin as needed */
     margin-right: 1%; /* Adjust the left margin as needed */
