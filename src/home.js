@@ -2,6 +2,7 @@
 async function search() {
     try {
         let searchInputVal = document.getElementById('searchInput').value;
+        console.log(searchInputVal.replace(/[^a-zA-Z0-9 ]/g, "").toLowerCase());
         const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/?where={"lowerCaseName": "${searchInputVal.toLowerCase()}"}`);
         const obj = await response.json();
         renderResults(obj);
@@ -40,6 +41,7 @@ async function renderResults(obj) {
 
 async function applyFilters() {
   try {
+      // console.log(localStorage.getItem("userEmail"));
       let bedroomsValue = document.getElementById('bedrooms').value;
       let bathroomsValue = document.getElementById('bathrooms').value;
       let rentMinValue = document.getElementById('rent-min').value;

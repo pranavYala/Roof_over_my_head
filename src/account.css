@@ -36,6 +36,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px #a3d1756d;
     width: 400px;
+    height: 300px;
 }
 
 input {
@@ -96,4 +97,53 @@ button:hover {
     border: 1.5px solid #0c7575;
     cursor: pointer;
     transition: .2s;
+}
+
+.logout-button {
+    background-color: #A3D175;
+    color: #283f01;
+    border-radius: 5px;
+    border: 1.5px solid #283f01;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .logout-button:hover {
+    background-color: #283f0156;
+    color: #0c7575;
+    border: 1.5px solid #0c7575;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.leave-button {
+    background-color: #A3D175;
+    color: #283f01;
+    border-radius: 5px;
+    border: 1.5px solid #283f01;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-top: 25%;
+    font-weight: bolder;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .leave-button:hover {
+    background-color: #283f0156;
+    color: #0c7575;
+    border: 1.5px solid #0c7575;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.logout {
+  margin-top: .7%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
