@@ -12,9 +12,11 @@
     align-items: center;
     justify-content: flex-start;
     overflow: hidden; 
-    border: 1px solid #ccc; 
-    margin-left: 1.5%; 
-    margin-right: 1%; 
+    border: 3px solid #0c7575;
+    border-radius: 3px;
+    margin-left: 1%; 
+    margin-right: .5%; 
+
   }
 
   .l-arrow {
@@ -23,7 +25,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    color: green; 
+    color: #0c7575; 
     font-size: 4vw; 
     font-weight: bold; 
   }
@@ -33,7 +35,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    color: green;
+    color: #0c7575;
     font-size: 4vw; 
     font-weight: bold;
     margin-right: 10%;
@@ -87,7 +89,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid #ccc; 
+    border: 3px solid #0c7575;
+    border-radius: 3px;
     margin-left: 1%; 
     margin-right: 1%;
   }
