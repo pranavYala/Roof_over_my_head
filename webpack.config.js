@@ -12,6 +12,11 @@ module.exports = {
       url: require.resolve('url/'),
       stream: require.resolve('stream-browserify'),
       util: require.resolve('util/'),
+      fs: false,
+      buffer: require.resolve('buffer/'),
+      querystring: require.resolve('querystring-es3/'),
+      http: require.resolve('stream-http'),
+      zlib: require.resolve('browserify-zlib'),
     }
   },
   module: {
