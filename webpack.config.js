@@ -17,6 +17,11 @@ module.exports = {
       querystring: require.resolve('querystring-es3/'),
       http: require.resolve('stream-http'),
       zlib: require.resolve('browserify-zlib'),
+      assert: require.resolve('assert/'),
+      crypto: require.resolve('crypto-browserify'),
+      https: require.resolve('https-browserify'),
+      // os: require.resolve('os-browserify/browser'),
+      net: false,
     }
   },
   module: {
