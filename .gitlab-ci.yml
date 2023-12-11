@@ -1,7 +1,8 @@
 image: node:latest
 
 variables:
-  PUBLIC_URL: /group66-finalproject
+  # PUBLIC_URL: /group66-finalproject
+  CI_REPOSITORY_URL: "https://gitlab.com/aghalya-n/group66-finalproject.git"
 
 cache:
   paths:
@@ -24,3 +25,4 @@ pages:
 
   only:
     - main
+  
