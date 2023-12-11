@@ -1,7 +1,7 @@
 image: node:latest
 
 variables:
-  PUBLIC_URL: /roofOverMyHead
+  PUBLIC_URL: /group66-finalproject
 
 cache:
   paths:
