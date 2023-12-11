@@ -1,13 +1,9 @@
-/* main {
-    margin-bottom: 52.7px;
-} */
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     /* height: 100vh; */
-    margin-top: 6%;
+    margin-top: 3%;
 }
 
 .form-container {
@@ -62,10 +58,6 @@ button {
     margin: 0 auto;
     letter-spacing: .6px;
 }
-
-/* button span {
-    display:inline-block;
-} */
 
 button:hover {
     background-color: #e6ffcc;

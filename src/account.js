@@ -28,8 +28,11 @@ async function loadUserData() {
         // console.log(email);
         if (email) {
             fetchUserData(email);
+            fetchAptData(email);
         } else {
-            alert("Error loading user data");
+            //console.log("No user email found")
+            alert("Please log in first");
+            window.location.href = "register.html";
             console.error("Error loading user data");
         }
     } catch (error) {
@@ -153,4 +156,69 @@ async function updateUserData(field, value) {
     }
 }
 
+async function fetchAptData(email) {
+    try {
+        const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/users/?where={"email": "${email}"}`);
+        // console.log(email)
+        const data = await response.json();
+        console.log(localStorage.getItem("buildingId"));
+        const aptAddress = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/${localStorage.getItem("buildingId")}`);
+        const obj = await aptAddress.json();
+        console.log(obj.data.address);
+        // console.log(data.data[0].firstName)
+        if (data.data.length > 0) {
+            const userData = data.data[0];
+            if(userData.queuePosition == -1){
+                document.getElementById("queue-position").innerText = "Not in queue";
+                document.getElementById("address").innerText = "Not in queue";
+            } else {
+                document.getElementById("queue-position").innerText = localStorage.getItem("queuePosition");
+            
+            // console.log(name)
+                document.getElementById("address").innerText = obj.data.address;
+            }
+            //document.getElementById("userPassword").innerText = userData.password;
+        } else {
+            console.error("No user found with email: ", email);
+            alert("No user found with email: ", email);
+        }
+    } catch (error) {
+        console.error("Error fetching user data: ", error);
+    }
+}
+
+async function logout(){
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userId");
+    window.location.href = "home.html";
+}
+
+async function leaveQueue(){
+    await updateUserData("queuePosition", -1);
+    localStorage.removeItem("queuePosition");
+    var email = localStorage.getItem("userEmail");
+    const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/users/?where={"email": "${email}"}`);
+    var data = await response.json()
+    var buildingid = data.data[0].queueRequest; //"65756b1129a389002a857918";
+
+    var responce4 = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/${buildingid}`);
+    var responceData = await responce4.json();
+    var responce2 = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/${buildingid}`, {
+                method: "PUT",
+                body: JSON.stringify({
+                    _id: buildingid,
+                    // queuePosition: maxQueue + 1
+                    available: responceData.data.available + 1
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            });
+    //console.log(responce4.data.available)
+    // alert("Left queue");
+    window.location.href = "account.html";
+}
+
 loadUserData();
+
+

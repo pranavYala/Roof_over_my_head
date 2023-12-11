@@ -7,6 +7,7 @@ async function getObj() {
       const itemId = urlParts[1];
     
       console.log('Item ID:', itemId);
+      localStorage.setItem("buildingId", itemId);
       const response = await fetch(`https://final-409-api-8d436d40ed6c.herokuapp.com/api/apartments/${itemId}`);
       const obj = await response.json();
       renderResults(obj.data);
@@ -125,8 +126,6 @@ async function renderResults(obj) {
     buildingContainer.appendChild(descButtonsContainer);
 
     container.appendChild(buildingContainer);
-
-    //////////////////////////////////////////////////////////////////////
 
     const aptContainer = document.getElementById('apt-container');
 
