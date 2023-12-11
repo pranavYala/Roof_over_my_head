@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './server.js', // Your main entry file
+  mode: 'development',
   output: {
     filename: 'bundle.js', // The name of the output bundle
     path: path.resolve(__dirname, 'dist'), // Output directory (it will be created if it doesn't exist)
@@ -23,6 +24,9 @@ module.exports = {
       // os: require.resolve('os-browserify/browser'),
       net: false,
     }
+  },
+  externals: {
+    express: 'commonjs express',
   },
   module: {
     rules: [
