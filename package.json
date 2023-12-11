@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider; webpack"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack"
   },
   "author": "Aghalya Narayanan",
   "license": "ISC",

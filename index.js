@@ -9,20 +9,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './src/', 'index.html'));
 });
 
-app.get('/queue', (req, res) => {
-    res.sendFile(path.join(__dirname, './src/', 'queue.html'));
-});
-
-app.get('/queue', (req, res) => {
-    res.sendFile(path.join(__dirname, './src/', 'detail-view.html'));
-});
-
-// handle export(currently export json file)
-app.get('/export', function(req, res) {
-    const databasePath = path.join(__dirname, 'database', 'database_current.json');
-    res.download(databasePath);
-});
-
 // Set the port and start the server
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
