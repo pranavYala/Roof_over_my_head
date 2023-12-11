@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './server.js', // Your main entry file
+  entry: './index.js', // Your main entry file
   mode: 'development',
   output: {
     filename: 'bundle.js', // The name of the output bundle

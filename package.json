@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "CS409 final project",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider; webpack"
   },
   "author": "Aghalya Narayanan",

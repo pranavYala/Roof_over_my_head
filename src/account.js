@@ -190,7 +190,7 @@ async function fetchAptData(email) {
 async function logout(){
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userId");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 }
 
 async function leaveQueue(){
